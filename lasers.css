@@ -11,3 +11,20 @@
     height: 100%;
     border: 1px solid #000000;
 }
+.rightlaser{
+    position: absolute;
+    width: 12%;
+    right: 0px;
+    bottom: 0px;
+}
+.gamescreen{
+    width:100%;
+}
+line{
+    stroke:rgb(255,0,0);
+    stroke-width:2
+}
+svg{
+    height:50px;
+    width: 100%;
+}

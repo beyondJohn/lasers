@@ -1,8 +1,8 @@
-var firelaser = function () {
+var firerightlaser = function () {
 
     //move right laser
-    if (!isactive) {
-        isactive = true;
+    if (!isrightactive) {
+        isrightactive = true;
         var rightlaser = document.getElementsByClassName("rightlaser")[0];
         rightlaser.setAttribute("style", "display:block; right:100%; bottom:70px");
         setTimeout(function () {
@@ -11,11 +11,33 @@ var firelaser = function () {
         }, 400);
         setTimeout(function () {
             rightlaser.setAttribute("style", "display:block; right:-12%; bottom:-54px");
-            isactive = false;
+            isrightactive = false;
         }, 600);
     }
 
 
 
 }
-var isactive = false;
+var isrightactive = false;
+
+var fireleftlaser = function () {
+    
+        //move left laser
+        if (!isleftactive) {
+            isleftactive = true;
+            var leftlaser = document.getElementsByClassName("leftlaser")[0];
+            leftlaser.setAttribute("style", "display:block; left:95%; bottom:88px");
+            setTimeout(function () {
+                leftlaser.removeAttribute("style");
+                leftlaser.setAttribute("style", "display:none; left:-22%; bottom:-31px");
+            }, 400);
+            setTimeout(function () {
+                leftlaser.setAttribute("style", "display:block; left:-22%; bottom:-31px");
+                isleftactive = false;
+            }, 600);
+        }
+    
+    
+    
+    }
+    var isleftactive = false;

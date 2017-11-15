@@ -22,14 +22,29 @@
     position: relative;
     left: 50%;
     overflow: hidden;
+    float: left;
 }
 .rightlaser{
     position: absolute;
     width: 12%;
-    right: -12%;
     bottom: -54px;
     transform: rotate(-11deg);
     transition: all .2s;
+}
+.leftcontainer{
+    width: 50%;
+    height: 200px;
+    /* border: 1px solid; */
+    position: absolute;
+    overflow: hidden;
+}
+.leftlaser{
+    position: absolute;
+    width: 12%;
+    bottom: -31px;
+    transform: rotate(108deg);
+    transition: all .2s;
+    left: -22%
 }
 svg{
     height:50px;

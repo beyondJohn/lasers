@@ -11,18 +11,22 @@
 </head>
 
 <body>
-    <div class="divcontainer" onclick="firelaser()">
+    <div class="divcontainer" >
         <div class="divborder">
             <div class="gamescreen">
-                <div class="rightcontainer">
+                <div class="rightcontainer" onclick="firerightlaser()">
                     <div class="rightlaser">
                         <svg>
                             <line x1="0" y1="0" x2="200" y2="200" />
                         </svg>
                     </div>
                 </div>
-                <div class="leftlaser">
-
+                <div class="leftcontainer" onclick="fireleftlaser()">
+                    <div class="leftlaser">
+                        <svg>
+                            <line x1="0" y1="0" x2="200" y2="200" />
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>

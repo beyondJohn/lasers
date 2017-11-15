@@ -1,0 +1,13 @@
+.divcontainer{
+    position: relative;
+    margin: 10% 20% 0% 20%;
+    width: 60%;
+    height: 200px;
+}
+
+.divborder{
+    position: relative;
+    width:100%;
+    height: 100%;
+    border: 1px solid #000000;
+}

@@ -16,9 +16,6 @@ var firerightlaser = function () {
             isrightactive = false;
         }, 600);
     }
-
-
-
 }
 var isrightactive = false;
 

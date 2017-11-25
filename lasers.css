@@ -1,4 +1,31 @@
+.ball-animation {
+
+    width: 60em;
+    height: 60em;
+    border-radius: 50%;
+    
+    position: absolute;
+  
+    /* Animate only the bouncing movement */
+    -webkit-animation: 4s linear 0s normal forwards infinite bouncing-ball;
+    animation: 4s linear 0s normal forwards infinite bouncing-ball;
+  }
+  .ball-decoration {
+    width: 100%;
+    height: 100%;
+    background: url("/asteroid.png") no-repeat center;
+    background-size: contain;
+    
+    /* Animate the rotation of the ball while it bounces */
+    -webkit-animation: 1s linear 0s normal forwards infinite rotating-ball;
+    animation: 1s linear 0s normal forwards infinite rotating-ball;
+  }
+  @keyframes bouncing-ball {
+    0% {top: 150em;left: 150em;transform: none; transform: rotate(0deg) scaleY(1.2);}
+    100% {top: 700em;left: 1400em;transform: none; transform: rotate(360deg) scaleY(1.3);}
+  }
 .divcontainer{
+    font-size: .3px;
     position: relative;
     margin: 2% 20% 0% 20%;
     width: 60%;
@@ -10,7 +37,9 @@
     width:100%;
     height: 100%;
     border: 1px solid #000000;
-    /* overflow: hidden; */
+    overflow: hidden;
+    background-image: url(http://spacewallpapers.org/wp-content/uploads/2014/11/blue-galaxy-in-deep-space.jpg);
+    background-position: 1000px ; 
 }
 .gamescreen{
     width:100%;

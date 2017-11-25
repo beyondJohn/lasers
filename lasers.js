@@ -1,3 +1,43 @@
+var asteroidx; 
+var asteroidy;
+var leftlaserx;
+var leftlasery;
+const asteroid = document.getElementsByClassName("ball-animation")[0];
+const leftlaser = document.getElementsByClassName("leftcontainer")[0];
+(function () {
+    function trackdiv() {
+
+        
+        setInterval(() => {
+            asteroidx = getPos(asteroid).x; 
+            asteroidy = getPos(asteroid).y;
+            leftlaserx = getPos(leftlaser).x;
+            leftlasery = getPos(leftlaser).y;
+            if(leftlaserx <= asteroidx + 50 
+                &&  leftlaserx >= asteroidx - 50){
+                    if(leftlasery <= asteroidy + 50 
+                        && leftlasery >= asteroidy - 50){
+                            //console.log("getPos(asteroid).x",getPos(asteroid).x );
+                            console.log("getPos(asteroid).y",getPos(asteroid).y );
+                            //console.log("getPos(leftlaser).x",getPos(leftlaser).x + ", getPos(leftlaser).y", + getPos(leftlaser).y);
+                            //alert("Direct hit!!!");
+                        }
+                    
+                }
+        }, 50)
+
+
+    }
+    trackdiv();
+
+})()
+function getPos(el) {
+    // yay readability
+    for (var lx = 0, ly = 0;
+        el != null;
+        lx += el.offsetLeft, ly += el.offsetTop, el = el.offsetParent);
+    return { x: lx, y: ly };
+}
 var firerightlaser = function () {
 
     //move right laser
@@ -20,6 +60,11 @@ var firerightlaser = function () {
 var isrightactive = false;
 
 var fireleftlaser = function () {
+    setTimeout(()=>{
+        //console.log("getPos(asteroid).x",getPos(asteroid).x );
+        console.log("getPos(asteroid).y",getPos(asteroid).y );
+        //console.log("getPos(leftlaser).x",getPos(leftlaser).x + ", getPos(leftlaser).y", + getPos(leftlaser).y);
+    },0)
 
     //move left laser
     if (!isleftactive) {

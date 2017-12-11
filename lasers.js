@@ -18,9 +18,9 @@ const leftlaser = document.getElementsByClassName("leftcontainer")[0];
                     if(leftlasery <= asteroidy + 50 
                         && leftlasery >= asteroidy - 50){
                             //console.log("getPos(asteroid).x",getPos(asteroid).x );
-                            console.log("getPos(asteroid).y",getPos(asteroid).y );
+                            //console.log("getPos(asteroid).y",getPos(asteroid).y );
                             //console.log("getPos(leftlaser).x",getPos(leftlaser).x + ", getPos(leftlaser).y", + getPos(leftlaser).y);
-                            //alert("Direct hit!!!");
+                            //console.log("Direct hit!!!");
                         }
                     
                 }
@@ -42,8 +42,8 @@ var firerightlaser = function () {
 
     //move right laser
     if (!isrightactive) {
-        var audio = new Audio('space_laser_shot.mp3');
-        audio.play();
+        //var audio = new Audio('space_laser_shot.mp3');
+        //audio.play();
         isrightactive = true;
         var rightlaser = document.getElementsByClassName("rightlaser")[0];
         rightlaser.setAttribute("style", "display:block; right:100%; bottom:70px");
@@ -60,16 +60,16 @@ var firerightlaser = function () {
 var isrightactive = false;
 
 var fireleftlaser = function () {
-    setTimeout(()=>{
+   //setTimeout(()=>{
         //console.log("getPos(asteroid).x",getPos(asteroid).x );
         console.log("getPos(asteroid).y",getPos(asteroid).y );
         //console.log("getPos(leftlaser).x",getPos(leftlaser).x + ", getPos(leftlaser).y", + getPos(leftlaser).y);
-    },0)
+    //},0)
 
     //move left laser
     if (!isleftactive) {
-        var audio = new Audio('space_laser_shot.mp3');
-        audio.play();
+        //var audio = new Audio('space_laser_shot.mp3');
+        //audio.play();
         isleftactive = true;
         var leftlaser = document.getElementsByClassName("leftlaser")[0];
         leftlaser.setAttribute("style", "display:block; left:95%; bottom:88px");
@@ -81,6 +81,17 @@ var fireleftlaser = function () {
             leftlaser.setAttribute("style", "display:block; left:-22%; bottom:-31px");
             isleftactive = false;
         }, 600);
+        var position = getPos(asteroid).y;
+        if( position > 108 && position < 115 ){
+            console.log("Direct HIt!!!");
+            setTimeout(()=>{
+                leftlaser.style.display = 'none';
+            },175)
+            setTimeout(()=>{
+                asteroid.style.display = 'none';
+            },250)
+            
+        }
     }
 
 
